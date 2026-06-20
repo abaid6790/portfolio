@@ -28,11 +28,10 @@ I am a Machine Learning enthusiast specializing in Python, AI, and Computer Visi
 ---
 
 ## 🌐 Live Demo
-(Add your GitHub Pages / Vercel link here)
-
+https://portfolio-pi-navy-lg29xyfbg2.vercel.app/
 ---
 
 ## 📫 Contact
-- Email: your-email@gmail.com
-- LinkedIn: your-link
-- GitHub: your-link
+- Email: abaidurrehman6790@gmail.com
+- LinkedIn: linkedin.com/in/malik-abaid-ur-rehman-996b9437b
+- GitHub: github.com/abaid6790
