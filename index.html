@@ -1,287 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abaid-ur-Rehman Portfolio</title>
+    <meta name="description" content="Professional AI & Machine Learning Portfolio">
 
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">AR</div>
+    <div class="progress-bar"></div>
 
-        <ul class="nav-menu">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</nav>
-
-<!-- ================= HERO ================= -->
-<section id="home" class="hero">
-    <div class="hero-container">
-
-        <div class="profile-image">
-            <img src="images/profile.jpg" alt="Abaid-ur-Rehman">
-        </div>
-
-        <div class="hero-content">
-            <div class="hero-meta">
-                <span>Machine Learning Engineer | Python Developer | AI & Computer Vision Enthusiast</span>
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">&gt; AR.dev_</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#connect">Connect</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a href="#connect" class="btn outline">Let's Connect</a>
             </div>
+        </nav>
+    </header>
 
-            <h1 class="hero-title">Abaid-ur-Rehman</h1>
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-left">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    Available for Internship
+                </div>
 
-            <p class="hero-desc">
-                Python developer specializing in machine learning, data preprocessing, model training, and intelligent systems.
-            </p>
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1>Abaid-ur-Rehman</h1>
+                <h2><span id="typing">Machine Learning Engineer</span></h2>
 
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">View Work</a>
-
-                <a href="files/Abaid-ur-Rehman Resume.pdf" class="btn btn-outline" download>
-                    <i class="fas fa-download"></i> CV
-                </a>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section about">
-    <div class="container">
-
-        <h2 class="section-title">About</h2>
-
-        <div class="about-grid">
-
-            <div class="about-text">
-                <p>
-                    Machine Learning Engineer and Python Developer with hands-on experience in building AI, Machine Learning, and Computer Vision 
-                    applications. Skilled in data preprocessing, feature engineering, model training, model evaluation, and deployment using Flask. Developed 
-                    intelligent systems including fraud detection, object detection, classification models, and AI assistants using TensorFlow, Scikit-learn, OpenCV, 
-                    and Python. Passionate about solving real-world problems through Artificial Intelligence and continuously expanding technical expertise.
+                <p class="hero-description">
+                    I'm a Machine Learning Engineer and Python Developer passionate about building intelligent AI solutions. 
+                    I specialize in Machine Learning, Computer Vision, Large Language Models (LLMs), and Retrieval-Augmented Generation (RAG), 
+                    creating practical applications that solve real-world problems.
                 </p>
+
+                <div class="hero-buttons">
+                    <a href="files/Abaid-ur-Rehman-Resume.pdf" class="btn primary" download>Download Resume</a>
+                    <a href="files/Abaid-ur-Rehman-Resume.pdf" class="btn secondary" target="_blank">
+                        <i class="fa-solid fa-eye"></i> View CV
+                    </a>
+                </div>
+
+                <div class="social-icons">
+                    <a
+                        href="https://github.com/abaid6790"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/malik-abaid-ur-rehman-996b9437b"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/abaid.builds/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="about-stats">
-                <div class="stat-item">
-                    <div class="stat-number">20+</div>
-                    <div class="stat-label">Projects</div>
-                </div>
-
-                <div class="stat-item">
-                    <div class="stat-number">6+</div>
-                    <div class="stat-label">Months Exp</div>
-                </div>
-
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Satisfaction</div>
+            <div class="hero-right">
+                <div class="profile-card">
+                    <div class="profile-glow"></div>
+                    <img src="images/profile.jpg" alt="Profile Image">
                 </div>
             </div>
-
         </div>
-    </div>
-</section>
 
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="section skills">
-    <div class="container">
+        <div class="floating floating-1">
+            <i class="fa-brands fa-python"></i>
+        </div>
+        <div class="floating floating-2">
+            <i class="fa-solid fa-brain"></i>
+        </div>
+        <div class="floating floating-3">
+            <i class="fa-solid fa-database"></i>
+        </div>
+        <div class="floating floating-4">
+            <i class="fa-solid fa-microchip"></i>
+        </div>
+        <div class="floating floating-5">
+            <i class="fa-solid fa-terminal"></i>
+        </div>
 
-        <h2 class="section-title">Skills</h2>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <i class="fa-solid fa-angle-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="section-title">
+            <h5>ABOUT ME</h5>
+            <h2>Who I Am</h2>
+            <p>
+                I'm a Machine Learning Engineer and Python Developer passionate about creating intelligent AI solutions. 
+                I specialize in Machine Learning, Computer Vision, Large Language Models (LLMs), and Retrieval-Augmented Generation (RAG), 
+                with a focus on building practical applications that solve real-world problems.
+            </p>
+        </div>
+
+        <div class="about-container">
+            <div class="about-image">
+                <div class="image-card">
+                    <img src="images/profile.jpg" alt="Profile">
+                </div>
+            </div>
+
+            <div class="about-content">
+                <h3>Building Intelligent Solutions with AI.</h3>
+                <p>
+                    I'm Abaid-ur-Rehman, a Machine Learning Engineer and Python Developer with hands-on experience in Artificial Intelligence, 
+                    Computer Vision, and LLM-based applications. I enjoy transforming ideas into intelligent systems using Python, Flask, 
+                    TensorFlow, Scikit-learn, OpenCV, and modern AI technologies like Retrieval-Augmented Generation (RAG). My goal is to build 
+                    scalable, user-friendly, and impactful AI solutions while continuously learning emerging technologies.
+                </p>
+
+                <div class="about-cards">
+                    <div class="about-card">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <h4>Education</h4>
+                        <p>
+                            B.S. Artificial Intelligence<br>
+                            NFC-IEFR, Faisalabad<br>
+                            2023 - Present
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <i class="fa-solid fa-code"></i>
+                        <h4>Expertise</h4>
+                        <p>
+                            Machine Learning<br>
+                            Computer Vision<br>
+                            LLM & RAG
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <h4>Tech stack</h4>
+                        <p>
+                            Python & Flask<br>
+                            Tensorflow<br>
+                            OpenCV
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <h4>Goal</h4>
+                        <p>
+                            Build Intelligent<br>
+                            AI Applications<br>
+                            Solve Real Problems
+                        </p>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-box">
+                        <h2>30+</h2>
+                        <p>Projects</p>
+                    </div>
+                    <div class="stat-box">
+                        <h2>20+</h2>
+                        <p>Technologies</p>
+                    </div>
+                    <div class="stat-box">
+                        <h2>50+</h2>
+                        <p>AI Models</p>
+                    </div>
+                    <div class="stat-box">
+                        <h2>100%</h2>
+                        <p>Open Source Contributions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="section-title">
+            <h5>MY SKILLS</h5>
+            <h2>Technical Expertise</h2>
+            <p>Technologies and tools that I use to build AI-powered applications.</p>
+        </div>
 
         <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-solid fa-code"></i>
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
 
-            <div class="skill-group">
+            <div class="skill-card">
+                <i class="fa-solid fa-brain"></i>
                 <h3>Machine Learning</h3>
-                <div class="skill-list">
-
-                    <div class="skill-item">
-                        <span>Logistic Regression</span>
-                        <div class="skill-bar" data-width="95"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>Linear Regression</span>
-                        <div class="skill-bar" data-width="90"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>Random Forest</span>
-                        <div class="skill-bar" data-width="85"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>Decision Tree</span>
-                        <div class="skill-bar" data-width="85"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>SVM</span>
-                        <div class="skill-bar" data-width="85"></div>
-                    </div>
-
-                </div>
+                <ul>
+                    <li>Deep Learning</li>
+                    <li>Supervised Learning</li>
+                    <li>Feature Engineering</li>
+                    <li>Data Preprocessing</li>
+                    <li>Model Evaluation</li>
+                    <li>Model Training</li>
+                    <li>Predictive Modeling</li>
+                </ul>
             </div>
 
-            <div class="skill-group">
-                <h3>AI</h3>
-                <div class="skill-list">
-
-                    <div class="skill-item">
-                        <span>Natural Language Processing</span>
-                        <div class="skill-bar" data-width="80"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>Model Training</span>
-                        <div class="skill-bar" data-width="75"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>Deep Learning</span>
-                        <div class="skill-bar" data-width="80"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>Speech Processing</span>
-                        <div class="skill-bar" data-width="80"></div>
-                    </div>
-
-                </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-cubes"></i>
+                <h3>Libraries & Frameworks</h3>
+                <ul>
+                    <li>Flask</li>
+                    <li>Scikit-learn</li>
+                    <li>TensorFlow</li>
+                    <li>Streamlit</li>
+                    <li>Keras</li>
+                    <li>Pandas</li>
+                    <li>NumPy</li>
+                    <li>OpenCV</li>
+                    <li>Matplotlib</li>
+                    <li>Seaborn</li>
+                </ul>
             </div>
 
-            <div class="skill-group">
-                <h3>Languages</h3>
-                <div class="skill-list">
-
-                    <div class="skill-item">
-                        <span>Python</span>
-                        <div class="skill-bar" data-width="80"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>HTML</span>
-                        <div class="skill-bar" data-width="75"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>CSS</span>
-                        <div class="skill-bar" data-width="75"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>JS</span>
-                        <div class="skill-bar" data-width="75"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>SQL</span>
-                        <div class="skill-bar" data-width="75"></div>
-                    </div>
-
-                </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-robot"></i>
+                <h3>Artificial Intelligence</h3>
+                <ul>
+                    <li>Large Language Models (LLMs)</li>
+                    <li>Retrieval-Augmented Generation (RAG)</li>
+                    <li>Natural Language Processing (NLP)</li>
+                    <li>Image Classification</li>
+                    <li>Speech Processing</li>
+                    <li>Computer Vision</li>
+                    <li>Object Detection</li>
+                    <li>Prompt Engineering</li>
+                    <li>AI Chatbot Development</li>
+                </ul>
             </div>
 
-            <div class="skill-group">
-                <h3>Tools</h3>
-                <div class="skill-list">
-
-                    <div class="skill-item">
-                        <span>Google Colab</span>
-                        <div class="skill-bar" data-width="75"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>GitHub</span>
-                        <div class="skill-bar" data-width="75"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>VS Code</span>
-                        <div class="skill-bar" data-width="75"></div>
-                    </div>
-
-                    <div class="skill-item">
-                        <span>Kaggle</span>
-                        <div class="skill-bar" data-width="75"></div>
-                    </div>
-
-                </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-server"></i>
+                <h3>Database & Backend</h3>
+                <ul>
+                    <li>SQL</li>
+                    <li>Supabase</li>
+                    <li>REST APIs</li>
+                </ul>
             </div>
 
+            <div class="skill-card">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>Tools & Platforms</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>VS Code</li>
+                    <li>Jupyter</li>
+                    <li>Google Colab</li>
+                    <li>Kaggle</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <i class="fa-solid fa-people-group"></i>
+                <h3>Professional Skills</h3>
+                <ul>
+                    <li>Problem Solving</li>
+                    <li>Communication</li>
+                    <li>Leadership</li>
+                    <li>Teamwork</li>
+                    <li>Critical Thinking</li>
+                    <li>Continuous Learning</li>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="section projects">
-    <div class="container">
-
-        <h2 class="section-title">Projects</h2>
+    <section id="projects" class="projects">
+        <div class="section-title">
+            <h5>MY WORK</h5>
+            <h2>Featured Projects</h2>
+            <p>
+                A selection of my recent AI, Machine Learning, and Python projects showcasing real-world implementation.
+            </p>
+        </div>
 
         <div class="projects-grid">
-
-            <!-- Project 1 -->
             <div class="project-card">
-                <div class="project-media">
-                    <img src="images/project1.jpg" alt="Shop Management">
-                    <div class="project-type">Desktop App</div>
-                </div>
-
-                <div class="project-info">
-                    <h3>Shop Management System</h3>
-                    <p>Complete shop management system for products, billing, and inventory tracking.</p>
-
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>File Handling</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a href="https://github.com/abaid6790/shop-management-system.git" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://shop-management-system-steel.vercel.app/" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-media">
-                    <img src="images/project2.jpg" alt="Jarvis AI Assistant">
-                    <div class="project-type">AI Assistant</div>
-                </div>
-
-                <div class="project-info">
+                <img src="images/project2.jpg" alt="Project 2">
+                <div class="project-content">
                     <h3>Jarvis AI Desktop Assistant</h3>
                     <p>
-                        An AI-powered desktop assistant capable of voice commands, automation,
-                        file management, WhatsApp messaging, email sending, screenshots, and AI conversations.
+                        An AI-powered desktop assistant capable of voice commands, automation, file management, WhatsApp messaging, email sending, screenshots, and AI conversations.
                     </p>
-
-                    <div class="project-tags">
+                    <div class="tech-stack">
                         <span>Python</span>
                         <span>Flask</span>
                         <span>Ollama</span>
@@ -289,32 +341,22 @@
                         <span>CSS</span>
                         <span>JavaScript</span>
                     </div>
-
                     <div class="project-links">
                         <a href="https://github.com/abaid6790/Jarvis-AI-assistant" target="_blank">
-                            <i class="fab fa-github"></i>
+                            <i class="fa-brands fa-github"></i> Source Code
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 3 -->
             <div class="project-card">
-                <div class="project-media">
-                    <img src="images/project3.jpg" alt="Smart Waste Classification">
-                    <div class="project-type">AI Project</div>
-                </div>
-
-                <div class="project-info">
+                <img src="images/project3.jpg" alt="Project 3">
+                <div class="project-content">
                     <h3>Smart Waste Classification System</h3>
-
                     <p>
-                        Developed an AI-powered waste classification system.
-                        Classifies waste into six categories with ~91.5% accuracy.
-                        Includes image prediction, live detection, dashboard, analytics, and voice feedback.
+                        Developed an AI-powered waste classification system. Classifies waste into six categories with ~91.5% accuracy. Includes image prediction, live detection, dashboard, analytics, and voice feedback.
                     </p>
-
-                    <div class="project-tags">
+                    <div class="tech-stack">
                         <span>Python</span>
                         <span>TensorFlow</span>
                         <span>EfficientNetB0</span>
@@ -323,62 +365,44 @@
                         <span>Deep Learning</span>
                         <span>Chart.js</span>
                     </div>
-
                     <div class="project-links">
-                        <a href="https://github.com/abaid6790/typing_speed_checker" target="_blank">
-                            <i class="fab fa-github"></i>
+                        <a href="https://github.com/abaid6790/Waste_classification" target="_blank">
+                            <i class="fa-brands fa-github"></i> Source Code
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 4 -->
             <div class="project-card">
-                <div class="project-media">
-                    <img src="images/project4.jpg" alt="People Counting System">
-                    <div class="project-type">Computer Vision</div>
-                </div>
-
-                <div class="project-info">
+                <img src="images/project4.jpg" alt="Project 4">
+                <div class="project-content">
                     <h3>People Counting System</h3>
-
                     <p>
-                        An AI-based computer vision system that detects and counts people in real time
-                        using YOLO and OpenCV for surveillance and crowd analytics.
+                        An AI-based computer vision system that detects and counts people in real time using YOLO and OpenCV for surveillance and crowd analytics.
                     </p>
-
-                    <div class="project-tags">
+                    <div class="tech-stack">
                         <span>Python</span>
-                        <span>OpenCV</span>
                         <span>YOLO</span>
                         <span>Flask</span>
+                        <span>OpenCV</span>
                         <span>JavaScript</span>
                     </div>
-
                     <div class="project-links">
                         <a href="https://github.com/abaid6790/people_counting_system" target="_blank">
-                            <i class="fab fa-github"></i>
+                            <i class="fa-brands fa-github"></i> Source Code
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 5 -->
             <div class="project-card">
-                <div class="project-media">
-                    <img src="images/project5.jpg" alt="Credit Card Fraud Detection">
-                    <div class="project-type">Machine Learning</div>
-                </div>
-
-                <div class="project-info">
+                <img src="images/project5.jpg" alt="Project 5">
+                <div class="project-content">
                     <h3>Credit Card Fraud Detection</h3>
-
                     <p>
-                        A machine learning model designed to detect fraudulent credit card transactions
-                        using supervised learning techniques.
+                        A machine learning model designed to detect fraudulent credit card transactions using supervised learning techniques.
                     </p>
-
-                    <div class="project-tags">
+                    <div class="tech-stack">
                         <span>Python</span>
                         <span>Pandas</span>
                         <span>NumPy</span>
@@ -386,147 +410,187 @@
                         <span>Machine Learning</span>
                         <span>Data Analysis</span>
                     </div>
-
                     <div class="project-links">
                         <a href="https://github.com/abaid6790/credit-card-fraud-detection" target="_blank">
-                            <i class="fab fa-github"></i>
+                            <i class="fa-brands fa-github"></i> Source Code
                         </a>
                     </div>
                 </div>
             </div>
-             <!-- Project 6 -->
+
             <div class="project-card">
-                <div class="project-media">
-                    <img src="images/project6.jpg" alt="Credit Card Fraud Detection">
-                    <div class="project-type">Machine Learning</div>
-                </div>
-
-                <div class="project-info">
-                    <h3>Apple Diease Detection</h3>
-
+                <img src="images/project6.jpg" alt="Project 6">
+                <div class="project-content">
+                    <h3>Apple Disease Detection</h3>
                     <p>
-                        Built a CNN-based deep learning application to detect apple diseases from images using TensorFlow and Flask, featuring a modern dashboard 
-                        with prediction analytics and disease information
+                        Built a CNN-based deep learning application to detect apple diseases from images using TensorFlow and Flask, featuring a modern dashboard with prediction analytics and disease information.
                     </p>
-
-                    <div class="project-tags">
+                    <div class="tech-stack">
                         <span>Python</span>
-                        <span>Pandas</span>
-                        <span>NumPy</span>
                         <span>TensorFlow</span>
+                        <span>NumPy</span>
                         <span>Keras</span>
                         <span>Flask</span>
+                        <span>Pillow</span>
                     </div>
-
                     <div class="project-links">
                         <a href="https://github.com/abaid6790/apple_diease_detection" target="_blank">
-                            <i class="fab fa-github"></i>
+                            <i class="fa-brands fa-github"></i> Source Code
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 7 -->
             <div class="project-card">
-                <div class="project-media">
-                    <img src="images/project7.jpg" alt="AI Typing Speed Tester">
-                    <div class="project-type">Full Stack Project Project</div>
-                </div>
-
-                <div class="project-info">
+                <img src="images/project7.jpg" alt="Project 7">
+                <div class="project-content">
                     <h3>AI Typing Speed Tester</h3>
-
                     <p>
-                        Developed a full-stack typing speed platform with secure authentication,
-                        real-time WPM tracking, analytics, leaderboards, achievements,
-                        daily & weekly challenges, user profiles, and XP-based gamification
-                        using Flask and Supabase.
+                        Developed a full-stack typing speed platform with secure authentication, real-time WPM tracking, analytics, leaderboards, achievements, daily & weekly challenges, user profiles, and XP-based gamification using Flask and Supabase.
                     </p>
-
-                    <div class="project-tags">
+                    <div class="tech-stack">
                         <span>Python</span>
                         <span>Flask</span>
                         <span>Supabase</span>
                         <span>PostgreSQL</span>
                         <span>JavaScript</span>
                         <span>Chart.js</span>
-                        <span>HTML/CSS</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
                     </div>
-
                     <div class="project-links">
-                        <a href="https://github.com/abaid6790/Waste_classification" target="_blank">
-                            <i class="fab fa-github"></i>
+                        <a href="https://github.com/abaid6790/typing_speed_checker" target="_blank">
+                            <i class="fa-brands fa-github"></i> Source Code
                         </a>
                     </div>
                 </div>
             </div>
 
+            <div class="project-card">
+                <img src="images/project8.jpg" alt="Project 8">
+                <div class="project-content">
+                    <h3>AI Image Generator</h3>
+                    <p>
+                        Developed a full-stack AI image generation application integrating Hugging Face models for text-to-image generation. Implemented prompt enhancement, image editing (rotate, flip, brightness, contrast, saturation, sharpness), image history, favorites, search, sorting, and metadata management within a responsive user interface.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>Javascript</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Hugging Face API</span>
+                        <span>JSON</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/abaid6790/Image_Generator" target="_blank">
+                            <i class="fa-brands fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section contact">
-    <div class="container">
+    <section id="connect" class="connect">
+        <div class="section-title">
+            <h5>GET IN TOUCH</h5>
+            <h2>Let's Connect</h2>
+            <p>Feel free to reach out for collaborations, freelance work, internships, or just to say hello.</p>
+        </div>
 
-        <h2 class="section-title">Contact</h2>
-
-        <div class="contact-grid">
-
+        <div class="connect-container">
             <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>abaidurrehman6790@gmail.com</span>
+                <div class="contact-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <a
+                            href="mailto:abaidurrehman6790@gmail.com"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            abaidurrehman6790@gmail.com
+                        </a>
+                    </div>
                 </div>
 
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+92 308 9042467</span>
+                <div class="contact-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Faisalabad , Pakistan</p>
+                    </div>
                 </div>
 
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Faisalabad, Pakistan</span>
+                <div class="contact-card">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <div>
+                        <h3>Availability</h3>
+                        <p>Open to Internships</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/923089042467" target="_blank" rel="noopener noreferrer">+92 308 9042467</a>
+                    </div>
                 </div>
             </div>
 
-            <form class="contact-form" id="contactForm">
-                <div class="form-row">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                </div>
-
-                <textarea placeholder="Message" rows="4" required></textarea>
-
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i> Send Message
-                </button>
-            </form>
-
-        </div>
-
-        <!-- Social Links -->
-        <div class="contact-social">
-            <h4>Connect on:</h4>
-
-            <div class="social-links">
-                <a href="https://github.com/dashboard" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/malik-abaid-ur-rehman-996b9437b" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.facebook.com/share/1dAokoM6sH/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/malikabaid176?igsh=cXdtNmhwbWk2Zzhp" target="_blank"><i class="fab fa-instagram"></i></a>
+            <div class="contact-form">
+                <form id="contact-form">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
             </div>
         </div>
+    </section>
 
-    </div>
-</section>
+    <footer>
+        <div class="footer-content">
+            <h3>Abaid-ur-Rehman</h3>
+            <p>Designed & Developed by Abaid-ur-Rehman | Machine Learning Engineer</p>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-    <div class="container">
-        <p>© 2024 Abaid-ur-Rehman. All rights reserved. | Made with ❤️</p>
-    </div>
-</footer>
+            <div class="footer-social">
+                <a
+                    href="https://github.com/abaid6790"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/malik-abaid-ur-rehman-996b9437b"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                    href="https://www.instagram.com/abaid.builds/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
 
-<script src="script.js"></script>
+            <p class="copyright">© 2026 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("NEafLGmDnRn99GSLC");
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,132 +1,184 @@
-const EMAILJS_CONFIG = {
-    serviceID: 'service_uvwq7m6', 
-    templateID: 'template_xc398fh',   
-    publicKey: 'NEafLGmDnRn99GSLC'       
-};
-// INITIALIZE EMAILJS
-(function() {
-    if (typeof emailjs !== 'undefined') {
-        emailjs.init(EMAILJS_CONFIG.publicKey);
-        console.log('✅ EmailJS initialized');
-    } else {
-        console.error('❌ EmailJS not loaded');
-    }
-})();
-// TEST FUNCTION - RUN IN CONSOLE
-window.testEmailJS = function() {
-    console.log('🔍 EmailJS Config Check:');
-    console.log('Service ID:', EMAILJS_CONFIG.serviceID);
-    console.log('Template ID:', EMAILJS_CONFIG.templateID);
-    console.log('Public Key:', EMAILJS_CONFIG.publicKey?.substring(0, 10) + '...');
-    console.log('EmailJS available:', typeof emailjs !== 'undefined');
-    console.log('Send function:', typeof emailjs.send);
-};
-// MOBILE NAVIGATION
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
+const body = document.body;
+const themeBtn = document.getElementById("theme-toggle");
+const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.querySelector(".nav-links");
+const progressBar = document.querySelector(".progress-bar");
+const backToTop = document.getElementById("backToTop");
+const header = document.querySelector("header");
+const sections = document.querySelectorAll("section");
+const navItems = document.querySelectorAll(".nav-links a");
+/*THEME*/
+const savedTheme = localStorage.getItem("theme");
+if(savedTheme === "light"){
+    body.classList.add("light-mode");
+    themeBtn.innerHTML =
+    '<i class="fa-solid fa-moon"></i>';
 }
-// SMOOTH SCROLLING
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-        // Close mobile menu
-        if (navMenu) navMenu.classList.remove('active');
-    });
-});
-// NAVBAR SCROLL EFFECT
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-        navbar.style.background = window.scrollY > 50 
-            ? 'rgba(10, 10, 15, 0.98)' 
-            : 'rgba(10, 10, 15, 0.95)';
+else{
+    themeBtn.innerHTML =
+    '<i class="fa-solid fa-sun"></i>';
+}
+themeBtn.addEventListener("click",()=>{
+    body.classList.toggle("light-mode");
+    if(body.classList.contains("light-mode")){
+        localStorage.setItem(
+            "theme",
+            "light"
+        );
+        themeBtn.innerHTML =
+        '<i class="fa-solid fa-moon"></i>';
+    }
+    else{
+        localStorage.setItem(
+            "theme",
+            "dark"
+        );
+        themeBtn.innerHTML =
+        '<i class="fa-solid fa-sun"></i>';
     }
 });
-// SKILL BARS ANIMATION
-const skillObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.querySelectorAll('.skill-bar').forEach((bar, index) => {
-                setTimeout(() => {
-                    bar.style.setProperty('--width', bar.dataset.width + '%');
-                }, index * 100);
+// MOBILE MENU
+menuBtn.addEventListener("click",()=>{
+    navLinks.classList.toggle("active");
+});
+navItems.forEach(item=>{
+    item.addEventListener("click",()=>{
+        navLinks.classList.remove("active");
+    });
+});
+// TYPING EFFECT
+new Typed("#typing",{
+    strings:[
+        "Machine Learning Engineer",
+        "AI Engineer",
+        "Python Developer",
+        "Computer Vision",
+        "LLM Developer",
+        "Generative AI"
+    ],
+    typeSpeed:70,
+    backSpeed:45,
+    backDelay:1800,
+    loop:true
+});
+// SCROLL EFFECTS
+window.addEventListener("scroll",()=>{
+    /* Progress Bar */
+    const scrollTop = window.scrollY;
+    const pageHeight =
+    document.documentElement.scrollHeight
+    -
+    window.innerHeight;
+    progressBar.style.width =
+    (scrollTop/pageHeight)*100 + "%";
+    /* Header Shadow */
+    if(scrollTop > 50){
+        header.classList.add("scrolled");
+    }
+    else{
+
+        header.classList.remove("scrolled");
+
+    }
+    /* Back To Top */
+    if(backToTop){
+        if(scrollTop>500){
+            backToTop.classList.add("show");
+        }
+        else{
+            backToTop.classList.remove("show");
+        }
+    }
+    /* Active Navigation */
+    sections.forEach(section=>{
+        const top = scrollTop;
+        const offset =
+        section.offsetTop - 150;
+        const height =
+        section.offsetHeight;
+        const id =
+        section.getAttribute("id");
+        if(
+            top >= offset
+            &&
+            top < offset + height
+        ){
+            navItems.forEach(link=>{
+                link.classList.remove("active");
             });
-            skillObserver.unobserve(entry.target);
+            const active =
+            document.querySelector(
+                '.nav-links a[href="#'+id+'"]'
+            );
+            if(active){
+                active.classList.add("active");
+            }
         }
     });
-}, { threshold: 0.1 });
-document.querySelectorAll('.skill-group').forEach(group => {
-    skillObserver.observe(group);
 });
-// CONTACT FORM - MAIN FUNCTION
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const btn = this.querySelector('button');
-        const originalHTML = btn.innerHTML;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        btn.disabled = true;
-        try {
-            // Collect form data
-            const formData = {
-                from_name: this.querySelector('input[type="text"]').value.trim(),
-                from_email: this.querySelector('input[type="email"]').value.trim(),
-                message: this.querySelector('textarea').value.trim()
-            };
-            console.log('📤 Sending:', formData);
-            // Validate
-            if (!formData.from_name || !formData.from_email || !formData.message) {
-                throw new Error('Please fill all fields');
-            }
-            // Send email via EmailJS
-            const result = await emailjs.send(
-                EMAILJS_CONFIG.serviceID,
-                EMAILJS_CONFIG.templateID,
-                formData,
-                EMAILJS_CONFIG.publicKey
-            );
-            console.log('✅ SUCCESS:', result);
-            alert('🎉 Message sent successfully');
-            this.reset();
-        } catch (error) {
-            console.error('❌ EMAILJS ERROR:', error);
-            let errorMsg = 'Failed to send message';
-            if (error.text) errorMsg = error.text;
-            else if (error.message) errorMsg = error.message;
-            alert(`❌ ${errorMsg}\n\n💡 Tip: Check console or use direct email`);
-        } finally {
-            btn.innerHTML = originalHTML;
-            btn.disabled = false;
-        }
+// BACK TO TOP
+if(backToTop){
+    backToTop.addEventListener("click",()=>{
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
     });
 }
-// FADE-IN ANIMATIONS
-const fadeObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            fadeObserver.unobserve(entry.target);
+//SCROLL REVEAL
+const observer = new IntersectionObserver(
+(entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add(
+                "visible"
+            );
         }
     });
-}, { threshold: 0.1 });
-document.querySelectorAll('.project-card, .skill-group, .about-stats').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-    fadeObserver.observe(el);
+},
+{
+    threshold:0.15
+}
+);
+document.querySelectorAll(
+".about-card,.skill-card,.project-card,.contact-card,.stat-box"
+).forEach(el=>{
+    el.classList.add("reveal");
+    observer.observe(el);
 });
-// PAGE LOAD COMPLETE
-window.addEventListener('load', () => {
-    console.log('🌟 Portfolio loaded successfully!');
-    console.log('🧪 Run testEmailJS() in console to test EmailJS');
+// Email.js
+const contactForm =
+document.getElementById("contact-form");
+contactForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    const button =
+    contactForm.querySelector("button");
+    const originalText =
+    button.innerHTML;
+    button.disabled = true;
+    button.innerHTML =
+    '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+    emailjs.sendForm(
+        "service_uvwq7m6",
+        "template_xc398fh",
+        this
+    )
+    .then(function(){
+        button.innerHTML =
+        '<i class="fa-solid fa-circle-check"></i> Message Sent';
+        contactForm.reset();
+        setTimeout(()=>{
+            button.disabled = false;
+            button.innerHTML = originalText;
+        },3000);
+    })
+    .catch(function(error){
+        console.log(error);
+        button.innerHTML =
+        '<i class="fa-solid fa-circle-xmark"></i> Failed';
+        setTimeout(()=>{
+            button.disabled = false;
+            button.innerHTML = originalText;
+        },3000);
+    });
 });
