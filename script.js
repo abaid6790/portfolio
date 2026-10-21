@@ -54,7 +54,8 @@ new Typed("#typing",{
         "Python Developer",
         "Computer Vision",
         "LLM Developer",
-        "Generative AI"
+        "Generative AI",
+        "Oracle Developer"
     ],
     typeSpeed:70,
     backSpeed:45,
@@ -124,6 +125,34 @@ if(backToTop){
             behavior:"smooth"
         });
     });
+}
+// PROJECT CATEGORY FILTER
+const categoryBtns = document.querySelectorAll(".category-btn");
+const projectCards = document.querySelectorAll(".project-card");
+function filterProjects(category){
+    categoryBtns.forEach(btn=>{
+        btn.classList.toggle(
+            "active",
+            btn.dataset.category === category
+        );
+    });
+    projectCards.forEach(card=>{
+        if(card.dataset.category === category){
+            card.classList.remove("hidden");
+            card.classList.add("visible");
+        }
+        else{
+            card.classList.add("hidden");
+        }
+    });
+}
+categoryBtns.forEach(btn=>{
+    btn.addEventListener("click",()=>{
+        filterProjects(btn.dataset.category);
+    });
+});
+if(categoryBtns.length){
+    filterProjects("generative-ai");
 }
 //SCROLL REVEAL
 const observer = new IntersectionObserver(
